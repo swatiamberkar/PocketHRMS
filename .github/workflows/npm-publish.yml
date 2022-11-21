@@ -1,13 +1,10 @@
-name: Firefox
+name: Edge
 on: push
 jobs:
-  firefox:
-    runs-on: ubuntu-latest
-    container:
-      image: cypress/browsers:node12.16.1-chrome80-ff73
-      options: --user 1001
+  tests:
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - uses: cypress-io/github-action@v4
         with:
-          browser: firefox
+          browser: edge
